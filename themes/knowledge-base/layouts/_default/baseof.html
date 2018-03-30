@@ -9,7 +9,11 @@
   </head>
   <body>
     <!-- Code that all your templates share, like a header -->
-    {{ block "main" . }}
+    <p>Kind: {{ .Kind }} </p>
+    <p>Type: {{ .Type }} </p>      
+    <p>Section: {{ .Section }} </p>  
+    <p>CurrentSection: {{ .CurrentSection }} </p>          
+    {{ block "main" . }}    
       <!-- The part of the page that begins to differ between templates -->
     {{ end }}
     {{ block "footer" . }}
